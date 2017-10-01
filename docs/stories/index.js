@@ -1,11 +1,13 @@
 import React from 'react';
-import LinearGradient from 'react-native-linear-gradient';
-import { View } from 'react-native';
-import signInWithFacebook from './signInWithFacebook';
-import gradientBackground from './gradientBackground';
+import * as signInWithFacebook from './signInWithFacebook';
+import * as gradientBackground from './gradientBackground';
 
 import { storiesOf } from '@storybook/react';
 
-storiesOf('LinearGradient', module)
-.add('signInWithFacebook', signInWithFacebook)
-.add('gradientBackground', gradientBackground);
+storiesOf('Gradient background', module)
+  .add('basic', gradientBackground.basic)
+  .add('with an angle', gradientBackground.withAngle);
+
+storiesOf('Sign in with Facebook', module)
+  .add('basic', signInWithFacebook.basic)
+  .add('with start, end, locations', signInWithFacebook.withStartEndLocations);

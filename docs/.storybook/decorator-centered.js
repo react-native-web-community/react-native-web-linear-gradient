@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '100vh',
-  }
+  },
 });
 
 export default function(renderStory) {
