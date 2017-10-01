@@ -1,6 +1,6 @@
 {
   "name": "react-native-web-linear-gradient",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native for Web implementation of react-native-linear-gradient",
   "main": "src/index.js",
   "repository": {
@@ -23,7 +23,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
-    "presets": [ "react-native" ]
+    "presets": [
+      "react-native"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
