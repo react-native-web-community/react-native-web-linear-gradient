@@ -3,9 +3,10 @@ import { StyleSheet, View } from 'react-native';
 
 const styles = StyleSheet.create({
   root: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     minHeight: '100vh',
-    maxWidth: 680,
-    marginHorizontal: 'auto'
   }
 });
 

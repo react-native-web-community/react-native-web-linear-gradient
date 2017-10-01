@@ -1,7 +1,11 @@
 import React from 'react';
-
-import { storiesOf } from '@storybook/react';
 import LinearGradient from 'react-native-linear-gradient';
 import { View } from 'react-native';
+import signInWithFacebook from './signInWithFacebook';
+import gradientBackground from './gradientBackground';
 
-storiesOf('LinearGradient', module).add('simple', () => <LinearGradient colors={['red', 'blue']} />);
+import { storiesOf } from '@storybook/react';
+
+storiesOf('LinearGradient', module)
+.add('signInWithFacebook', signInWithFacebook)
+.add('gradientBackground', gradientBackground);
