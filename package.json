@@ -1,0 +1,28 @@
+{
+  "name": "react-native-web-linear-gradient",
+  "version": "0.0.0",
+  "description": "React Native for Web implementation of react-native-linear-gradient",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:react-native-web-community/react-native-web-linear-gradient.git"
+  },
+  "author": {
+    "name": "Louis Lagrange",
+    "email": "lagrange.louis@gmail.com",
+    "url": "https://github.com/Minishlink"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "react-native-web",
+    "react-native-linear-gradient",
+    "linear-gradient"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react-native-web": "*"
+  }
+}
