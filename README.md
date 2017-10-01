@@ -19,5 +19,8 @@ resolve: {
 ## Usage
 See [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient).
 
+## Examples
+See the [storybook](https://react-native-web-community.github.io/react-native-web-linear-gradient/storybook).
+
 ## Contributing
 PRs are welcome!
