@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 
 export default class LinearGradient extends PureComponent {
   static defaultProps = {
@@ -53,7 +53,6 @@ export default class LinearGradient extends PureComponent {
     return (
       <View
         style={[
-          styles.container,
           this.props.style,
           { backgroundImage: `linear-gradient(${this.getAngle()},${this.getColors()})` },
         ]}
@@ -64,9 +63,3 @@ export default class LinearGradient extends PureComponent {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignSelf: 'stretch',
-  },
-});

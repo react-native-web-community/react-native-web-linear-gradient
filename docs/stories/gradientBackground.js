@@ -11,5 +11,6 @@ export const withAngle = () => (
 const styles = StyleSheet.create({
   page: {
     flex: 1,
+    alignSelf: 'stretch',
   },
 });
