@@ -2,7 +2,7 @@
   "name": "react-native-web-linear-gradient",
   "version": "1.0.2",
   "description": "React Native for Web implementation of react-native-linear-gradient",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:react-native-web-community/react-native-web-linear-gradient.git"
