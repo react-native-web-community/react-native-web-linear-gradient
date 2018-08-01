@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-native-web-community/react-native-web-linear-gradient.git"
+    "url": "git+https://github.com/react-native-web-community/react-native-web-linear-gradient.git"
   },
   "author": {
     "name": "Louis Lagrange",
