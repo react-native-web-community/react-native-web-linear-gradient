@@ -2,7 +2,8 @@
   "name": "react-native-web-linear-gradient",
   "version": "1.0.2",
   "description": "React Native for Web implementation of react-native-linear-gradient",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "main-es": "src/index.js",
   "repository": "https://github.com/react-native-web-community/react-native-web-linear-gradient",
   "author": {
     "name": "Louis Lagrange",
@@ -17,6 +18,8 @@
     "linear-gradient"
   ],
   "scripts": {
+    "prepublish": "yarn build",
+    "build": "mkdir -p dist && babel src/index.js --out-file dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
@@ -25,6 +28,7 @@
     ]
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-react-native": "^4.0.0",
