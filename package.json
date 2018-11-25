@@ -1,6 +1,6 @@
 {
   "name": "react-native-web-linear-gradient",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React Native for Web implementation of react-native-linear-gradient",
   "main": "dist/index.js",
   "main-es": "src/index.js",
