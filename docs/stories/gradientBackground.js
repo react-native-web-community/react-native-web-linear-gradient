@@ -5,7 +5,13 @@ import LinearGradient from 'react-native-linear-gradient';
 export const basic = () => <LinearGradient colors={['red', 'blue']} style={styles.page} />;
 
 export const withAngle = () => (
-  <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['red', 'blue']} style={styles.page} />
+  <LinearGradient
+    start={{ x: 0, y: 0 }}
+    end={{ x: 1, y: 1 }}
+    angle={165}
+    colors={['#FEE140', '#FA709A']}
+    style={styles.page}
+  />
 );
 
 const styles = StyleSheet.create({
