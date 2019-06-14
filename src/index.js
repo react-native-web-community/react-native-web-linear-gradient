@@ -13,6 +13,8 @@ export default class LinearGradient extends PureComponent {
     },
     locations: [],
     colors: [],
+    useAngle: false,
+    angle: 45
   };
 
   state = {
@@ -25,17 +27,6 @@ export default class LinearGradient extends PureComponent {
       width: nativeEvent.layout.width,
       height: nativeEvent.layout.height,
     });
-
-  getAngle = () => {
-    // Math.atan2 handles Infinity
-    const angle =
-      Math.atan2(
-        this.state.width * (this.props.end.y - this.props.start.y),
-        this.state.height * (this.props.end.x - this.props.start.x)
-      ) +
-      Math.PI / 2;
-    return angle + 'rad';
-  };
 
   getColors = () =>
     this.props.colors
@@ -55,8 +46,6 @@ export default class LinearGradient extends PureComponent {
       end,
       colors,
       locations,
-      useAngle,
-      angleCenter,
       angle,
       style,
       children,
@@ -67,7 +56,9 @@ export default class LinearGradient extends PureComponent {
         {...otherProps}
         style={[
           style,
-          { backgroundImage: `linear-gradient(${this.getAngle()},${this.getColors()})` },
+          {
+            backgroundImage: `linear-gradient(${angle}deg,${this.getColors()})`
+          },
         ]}
         onLayout={this.measure}
       >
