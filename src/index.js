@@ -11,16 +11,12 @@ const LinearGradient = ({
   children,
   ...otherProps
 }) => {
-  getColors = () =>
-    colors.map((color, index) => {
-        const location = this.props.locations[index];
-        let locationStyle = '';
-        if (location) {
-          locationStyle = ' ' + location * 100 + '%';
-        }
-        return color + locationStyle;
-      })
-      .join(',');
+  const getColors = () => {
+    if (locations.length) {
+      return colors.map((color, i) => `${color} ${locations[i] * 100}%`)
+    }
+    return colors
+  }
 
   return (
     <View
@@ -28,7 +24,7 @@ const LinearGradient = ({
       style={[
         style,
         {
-          backgroundImage: `linear-gradient(${angle}deg,${this.getColors()})`
+          backgroundImage: `linear-gradient(${angle}deg,${getColors().join(',')})`
         },
       ]}
     >
@@ -51,3 +47,5 @@ LinearGradient.defaultProps = {
   useAngle: false,
   angle: 45
 };
+
+export default LinearGradient
