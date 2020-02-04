@@ -13,6 +13,8 @@ export default class LinearGradient extends PureComponent {
     },
     locations: [],
     colors: [],
+    useAngle: false,
+    angle: 0,
   };
 
   state = {
@@ -27,6 +29,10 @@ export default class LinearGradient extends PureComponent {
     });
 
   getAngle = () => {
+    if (this.props.useAngle) {
+      return this.props.angle + 'deg';
+    }
+
     // Math.atan2 handles Infinity
     const angle =
       Math.atan2(
