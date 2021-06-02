@@ -22,11 +22,15 @@ export default class LinearGradient extends PureComponent {
     height: 1,
   };
 
-  measure = ({ nativeEvent }) =>
+  measure = (event) => {
     this.setState({
-      width: nativeEvent.layout.width,
-      height: nativeEvent.layout.height,
+      width: event.nativeEvent.layout.width,
+      height: event.nativeEvent.layout.height,
     });
+    if (this.props.onLayout) {
+      this.props.onLayout(event);
+    }
+  }
 
   getAngle = () => {
     if (this.props.useAngle) {
